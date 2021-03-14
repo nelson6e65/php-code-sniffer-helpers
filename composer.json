@@ -9,5 +9,10 @@
       "email": "nelson6e65@gmail.com"
     }
   ],
-  "require": {}
+  "require": {
+    "php": ">=7.2"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.5"
+  }
 }
