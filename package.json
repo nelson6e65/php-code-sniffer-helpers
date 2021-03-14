@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "keywords": [
+    "phpcbf",
+    "php",
+    "linter",
+    "lint-staged"
+  ],
+  "homepage": "https://github.com/nelson6e65/php-code-sniffer-helpers#readme",
+  "bugs": {
+    "url": "https://github.com/nelson6e65/php-code-sniffer-helpers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nelson6e65/php-code-sniffer-helpers.git"
+  },
+  "license": "MIT",
+  "author": "Nelson Martell <nelson6e65@gmail.com>",
+  "scripts": {
+    "cs:fix": "prettier --write .",
+    "cs:lint": "prettier --check ."
+  },
+  "devDependencies": {
+    "@prettier/plugin-xml": "^0.13.1",
+    "prettier": "^2.2.1",
+    "prettier-plugin-packagejson": "^2.2.10"
+  }
+}
