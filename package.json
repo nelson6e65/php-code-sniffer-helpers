@@ -17,11 +17,17 @@
   "license": "MIT",
   "author": "Nelson Martell <nelson6e65@gmail.com>",
   "scripts": {
+    "prepare": "husky install",
     "cs:fix": "prettier --write .",
     "cs:lint": "prettier --check ."
   },
+  "lint-staged": {
+    "*.php,!src/ComposerScripts.php": "composer cs:fix-filtered"
+  },
   "devDependencies": {
     "@prettier/plugin-xml": "^0.13.1",
+    "husky": "^5.1.3",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "prettier-plugin-packagejson": "^2.2.10"
   }
