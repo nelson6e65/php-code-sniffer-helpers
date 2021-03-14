@@ -21,11 +21,24 @@
     "cs:fix": "prettier --write .",
     "cs:lint": "prettier --check ."
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "lint-staged": {
     "*.php,!src/ComposerScripts.php": "composer cs:fix-filtered"
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "@prettier/plugin-xml": "^0.13.1",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^5.1.3",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",

@@ -1,5 +1,6 @@
 # PHP Code Sniffer Helpers
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 ![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/nelson6e65/code-sniffer-helpers)
 
 [![GitHub release](https://img.shields.io/github/tag/nelson6e65/php-code-sniffer-helpers.svg?logo=github)](https://github.com/nelson6e65/php-code-sniffer-helpers/tags)
