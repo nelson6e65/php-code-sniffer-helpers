@@ -10,10 +10,18 @@
     }
   ],
   "scripts": {
+    "cs:fix-filtered": [
+      "NelsonMartell\\PhpCodeSniffer\\ComposerScripts::phpcbf"
+    ],
     "cs:php": [
       "phpcs src/ -q --standard=Generic --sniffs=Generic.PHP.Syntax --colors",
       "phpstan analyze"
     ]
+  },
+  "autoload": {
+    "psr-4": {
+      "NelsonMartell\\PhpCodeSniffer\\": "src"
+    }
   },
   "require": {
     "php": ">=7.2"
