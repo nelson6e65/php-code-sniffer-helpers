@@ -9,10 +9,18 @@
       "email": "nelson6e65@gmail.com"
     }
   ],
+  "scripts": {
+    "cs:php": [
+      "phpcs src/ -q --standard=Generic --sniffs=Generic.PHP.Syntax --colors",
+      "phpstan analyze"
+    ]
+  },
   "require": {
     "php": ">=7.2"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.5"
+    "squizlabs/php_codesniffer": "^3.5",
+    "phpstan/phpstan": "^0.12.81",
+    "composer/composer": "^2.0"
   }
 }
