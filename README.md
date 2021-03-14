@@ -1,5 +1,11 @@
 # PHP Code Sniffer Helpers
 
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/nelson6e65/code-sniffer-helpers)
+
+[![GitHub release](https://img.shields.io/github/tag/nelson6e65/php-code-sniffer-helpers.svg?logo=github)](https://github.com/nelson6e65/php-code-sniffer-helpers/tags)
+[![Latest Version](https://img.shields.io/packagist/v/nelson6e65/code-sniffer-helpers.svg?label=stable)](https://packagist.org/packages/nelson6e65/code-sniffer-helpers)
+[![Latest unstable Version](https://img.shields.io/packagist/vpre/nelson6e65/code-sniffer-helpers.svg?label=unstable)](https://packagist.org/packages/nelson6e65/code-sniffer-helpers#dev-main)
+
 [![License](https://img.shields.io/github/license/nelson6e65/php-code-sniffer-helpers.svg)](LICENSE)
 [![time tracker](https://wakatime.com/badge/github/nelson6e65/php-code-sniffer-helpers.svg)](https://wakatime.com/badge/github/nelson6e65/php-code-sniffer-helpers)
 
