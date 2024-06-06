@@ -22,7 +22,7 @@ class ComposerScripts
      */
     protected static $vendorDir;
 
-    protected static function getBinDir(Event $event)
+    protected static function getBinDir(Event $event): string
     {
         if (!static::$binDir) {
             static::$binDir = realpath($event->getComposer()->getConfig()->get('bin-dir'));
@@ -31,7 +31,7 @@ class ComposerScripts
         return static::$binDir;
     }
 
-    protected static function getVendorDir(Event $event)
+    protected static function getVendorDir(Event $event): string
     {
         if (!static::$vendorDir) {
             static::$vendorDir = realpath($event->getComposer()->getConfig()->get('vendor-dir'));
@@ -40,7 +40,7 @@ class ComposerScripts
         return static::$vendorDir;
     }
 
-    protected static function bootstrap(Event $event)
+    protected static function bootstrap(Event $event): void
     {
         require_once static::getVendorDir($event) . '/autoload.php';
     }
