@@ -64,7 +64,7 @@ class ComposerScripts
         $ignoredPaths = [];
 
         if ($count > 0) {
-            $event->getIO()->write("Fixing PHP Coding Standard of ${count} paths.");
+            $event->getIO()->write("Fixing PHP Coding Standard of {$count} paths.");
 
             foreach ($files as $i => $file) {
                 $realPath = realpath($file);
@@ -87,19 +87,19 @@ class ComposerScripts
 
                 $type = strlen($relativePath) < 4 || stripos($relativePath, '.php', -4) === false ? 'directory' : 'file';
 
-                $event->getIO()->write("Improving <info>${relativePath}</info> ${type}...");
+                $event->getIO()->write("Improving <info>{$relativePath}</info> {$type}...");
 
                 $output = [];
                 $return = 0;
 
                 // NOTE: workarround: need to run 2 times due to a bug that exits 1 instead of 0 when a file gets fixed
                 // https://github.com/squizlabs/PHP_CodeSniffer/issues/1818#issuecomment-735620637
-                exec("${cmd} \"${realPath}\" || ${cmd} \"${realPath}\" -q", $output, $return);
+                exec("{$cmd} \"{$realPath}\" || {$cmd} \"{$realPath}\" -q", $output, $return);
 
                 $event->getIO()->write($output, true, IOInterface::VERBOSE);
 
                 if ($return !== 0) {
-                    $event->getIO()->error("Error! Unable to autofix the ${relativePath} file!");
+                    $event->getIO()->error("Error! Unable to autofix the {$relativePath} file!");
                     $event->getIO()->write(
                         '<comment>Run <options=bold>`phpcs`</> manually to check the conflicting files</comment>'
                     );
@@ -113,7 +113,7 @@ class ComposerScripts
         $end_time       = microtime(true);
         $execution_time = round($end_time - $start_time, 2);
 
-        $event->getIO()->write("Done in ${execution_time}s");
+        $event->getIO()->write("Done in {$execution_time}s");
 
         if (count($ignoredPaths)) {
             $ignoredPaths = array_map(function ($item) {
