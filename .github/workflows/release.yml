@@ -14,10 +14,10 @@ jobs:
           fetch-depth: 0
 
       # PHP --------------------------------------------------------------------
-      - name: Setup PHP 7.4 environment
-        uses: nanasess/setup-php@v3.0.6
+      - name: Setup PHP environment
+        uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.2
+          php-version: '8.2'
 
       - name: Validate composer.json and composer.lock
         run: composer validate
